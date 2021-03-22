@@ -30,7 +30,7 @@
  '(org-agenda-files '("~/org/work.org" "~/org/main.org" "~/org/college.org"))
  '(org-todo-keywords '((sequence "" "TODO" "DONE")))
  '(package-selected-packages
-   '(spacemacs-theme org-bullets org-onenote zenburn-theme use-package)))
+   '(which-key spacemacs-theme org-bullets org-onenote zenburn-theme use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,3 +42,6 @@
 (put 'upcase-region 'disabled nil)
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(require 'which-key)
+(which-key-mode)
+(which-key-setup-side-window-right-bottom)
