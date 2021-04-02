@@ -27,7 +27,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files '("~/org/work.org" "~/org/main.org" "~/org/college.org"))
+ '(org-agenda-files '("~/org/main.org" "~/org/work.org" "~/org/college.org"))
  '(org-todo-keywords '((sequence "" "TODO" "DONE")))
  '(package-selected-packages
    '(which-key spacemacs-theme org-bullets org-onenote zenburn-theme use-package)))
@@ -45,3 +45,9 @@
 (require 'which-key)
 (which-key-mode)
 (which-key-setup-side-window-right-bottom)
+(setq org-agenda-skip-deadline-if-done t)
+(put 'downcase-region 'disabled nil)
+(global-set-key (kbd "<f12>") 'org-agenda)
+(global-set-key (kbd "<f9> c") 'calendar)
+(global-set-key (kbd "<f9> r") 'boxquote-region)
+(setq org-archive-location (concat org-directory "/archived.org::"))
